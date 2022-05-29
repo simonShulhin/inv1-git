@@ -1,4 +1,5 @@
 function calculate(str) {
+    // має бути const/let перед назвою
     strArray = str.split(" ");    
     let answer;    
     const firstNumber = strArray[0].length;
@@ -32,6 +33,8 @@ function calculate(str) {
   //console.log(calculate("..... + ..............."));  
 
   function grid(number) {
+    // треба переробити, функція має повертати масив масивів [[a,b],[b,c]]
+    // зараз в тебе функція взагалі нічого не повертає, консолі використовуються лише для того, щоб допомогати тобі дебажити
     if (number < 0) {
       console.log(null);
       return
@@ -61,6 +64,7 @@ function calculate(str) {
         if (stringArray.slice(-1) == '(') stringArray.pop(); else stringArray.push(string[i]);
       } else stringArray.push(string[i]);      
     }    
+      // використовуй === замість == 
     if (stringArray.length == 0) answer = true; else answer = false;
     return answer;
 }
